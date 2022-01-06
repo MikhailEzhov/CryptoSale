@@ -1,0 +1,60 @@
+/*!
+ * Bootstrap v5.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+
+// 1. Сначала включите функции (чтобы Вы могли управлять цветами, SVG, вычислением и т.д.)
+@import "functions";
+// 2. Включите ниже любые переопределения переменных по умолчанию
+// Пример переопределения переменных которые ниже в variables
+// $body-bg: #000;
+// $body-color: #111;
+
+// 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
+@import "variables";
+@import "mixins";
+@import "root";
+
+
+// 4. Включите любой необязательный Bootstrap CSS по мере необходимости
+@import "reboot";
+@import "grid";
+@import "containers";
+// @import "utilities";
+// @import "type";
+// @import "images";
+// @import "tables";
+// @import "forms";
+// @import "buttons";
+// @import "transitions";
+// @import "dropdown";
+// @import "button-group";
+// @import "nav";
+// @import "navbar";
+// @import "card";
+// @import "accordion";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "alert";
+// @import "progress";
+// @import "list-group";
+// @import "close";
+// @import "toasts";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
+// @import "offcanvas";
+// @import "placeholders";
+// @import "helpers";
+
+
+// 5. При желании можно включить последний API утилит для генерации классов на основе карты Sass в `_utilities.scss`
+// @import "utilities/api";
+
+// 6. Добавьте ниже дополнительный пользовательский код

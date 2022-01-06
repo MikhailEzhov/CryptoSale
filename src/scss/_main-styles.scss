@@ -1,0 +1,42 @@
+// ОСНОВНЫЕ СТИЛИ:
+html,
+body {
+    height: 100%; // не трогай
+    font-family: $fontFamilyMain; // не трогай
+    font-weight: $fontWeightMain; // не трогай
+    font-style: $fontStyleMain; // не трогай
+    font-size: $fontSizeMain; // не трогай
+    line-height: $lineHeightMain; // не трогай
+    color: $fontColorMain; // не трогай
+    background: $backgroundColorMain no-repeat; // не трогай
+    background-size: 100%; // так решил проблему, когда background начинает ехать при меньше чем 320px
+    background-attachment: fixed; // так решил проблему, когда background начинает ехать при меньше чем 320px
+    min-width: 320px; // можно убрать, это помогло когда адаптив Mobile приближаю к 0
+    // position: relative; // сам решай
+    // overflow-x: hidden; // сам решай
+}
+
+// самая верхняя оболочка
+.wrapper {
+    min-height: 100%; // не трогай
+    overflow: hidden; // так решил проблему, когда появлялись лишние скролы
+}
+
+// контент
+.container {
+    max-width: $maxWidthContentPX; // не трогай
+    margin: 0 auto; // не трогай
+    padding: 0px 10px; // сам решай
+    min-width: $minWidthContentPX; // не трогай
+}
+
+// для выделения текста на сайте
+::selection {
+    color: $backgroundColorMain; // не трогай
+    background: $fontColorMain; // не трогай
+}
+
+// подсказывающий текст (при наведении или в input)
+::placeholder {
+    color: $placeholderColorMain; // не трогай
+}

@@ -1,0 +1,111 @@
+.treasury {
+    margin-top: 70px;
+    padding-bottom: 50px;
+    @media (max-width: ($maxWidthContentNumber - 1) + px) {
+        @include adaptivPX($maxWidthContentNumber, 70, margin-top, 50);
+    } // можно менять только:                     это     это     это
+    @media (max-width: $breakpointMY320px) {
+        margin-top: 50px;
+    } //   это     это
+
+    &__title {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 30px;
+        margin-bottom: 48px;
+        @media (max-width: ($maxWidthContentNumber - 1) + px) {
+            @include adaptivPX($maxWidthContentNumber, 30, font-size, 22);
+        } // можно менять только:                     это     это     это
+        @media (max-width: $breakpointMY320px) {
+            font-size: 22px;
+        } //   это     это
+        @media (max-width: $breakpointLGpx) {
+            text-align: center;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__element {
+        background: #fbfbfb;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        margin-right: 16px;
+        margin-bottom: 36px;
+        width: 48%;
+        @media (max-width: $breakpointLGpx) {
+            margin-right: 0;
+            margin-bottom: 24px;
+            width: 100%;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: 10%;
+    }
+
+    &__picture {
+        width: 40px;
+        @media (max-width: ($maxWidthContentNumber - 1) + px) {
+            @include adaptivPX($maxWidthContentNumber, 40, width, 22);
+        } // можно менять только:                     это     это     это
+        @media (max-width: $breakpointMY320px) {
+            width: 22px;
+        } //   это     это
+    }
+
+    &__subtitle {
+        font-size: 22px;
+        color: $colorBlack;
+        white-space: nowrap;
+        @media (max-width: ($maxWidthContentNumber - 1) + px) {
+            @include adaptivPX($maxWidthContentNumber, 22, font-size, 16);
+        } // можно менять только:                     это     это     это
+        @media (max-width: $breakpointMY320px) {
+            font-size: 16px;
+        } //   это     это
+        @media (max-width: $breakpointSMpx) {
+            white-space: normal;
+        }
+    }
+
+    &__value {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    &__numbers {
+        font-weight: 500;
+        white-space: nowrap;
+        font-size: 22px;
+        color: $colorBlack;
+        @media (max-width: ($maxWidthContentNumber - 1) + px) {
+            @include adaptivPX($maxWidthContentNumber, 22, font-size, 16);
+        } // можно менять только:                     это     это     это
+        @media (max-width: $breakpointMY320px) {
+            font-size: 16px;
+        } //   это     это
+    }
+
+    &__currency {
+        align-self: center;
+        margin-left: 4px;
+        font-size: 18px;
+        color: $colorBlack;
+        @media (max-width: ($maxWidthContentNumber - 1) + px) {
+            @include adaptivPX($maxWidthContentNumber, 18, font-size, 16);
+        } // можно менять только:                     это     это     это
+        @media (max-width: $breakpointMY320px) {
+            font-size: 16px;
+        } //   это     это
+    }
+}

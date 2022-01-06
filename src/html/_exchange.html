@@ -1,0 +1,84 @@
+<section class="exchange">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <h1 class="exchange__title">Cryptocurrency exchange fast & safe</h1>
+                <p class="exchange__description">No extra fee. Account replenishment no longer than 15 minutes</p>
+
+
+                <form class="exchange__form" action="#" method="post">
+
+                    <div class="exchange__block">
+                        <div class="exchange__give">
+                            <span class="exchange__subtitle exchange__subtitle_give">You give</span><br>
+                            <input id="inputGive" class="exchange__input exchange__input_give" required
+                                placeholder="Amount" name="user_give" type="text">
+                            <select id="selectCrypto" class="exchange__input exchange__input_currency" required
+                                placeholder="Amount" name="user_currency">
+                                <option class="exchange__currency-default" value="">Choose the currency</option>
+                                <option value="1">BTC</option>
+                                <option value="2">BCH</option>
+                                <option value="3">ETH</option>
+                                <option value="4">LTC</option>
+                            </select>
+                        </div>
+
+                        <span class="exchange__switch"></span>
+
+                        <div class="exchange__receive">
+                            <span class="exchange__subtitle exchange__subtitle_receive">You receive</span><br>
+                            <input id="inputReceive" class="exchange__input exchange__input_receive" required
+                                placeholder="Amount" name="user_receive" type="text">
+                            <select id="selectBank" class="exchange__input exchange__input_bank" required
+                                name="user_bank">
+                                <option class="exchange__currency-default" value="">Choose the currency</option>
+                                <option class="exchange__purse-tinkoff" value="1">Tinkoff bank</option>
+                                <option class="exchange__purse-sberbank" value="2">Sberbank</option>
+                                <option class="exchange__purse-youmoney" value="3">YouMoney</option>
+                                <option class="exchange__purse-qiwi" value="4">QIWI</option>
+                                <option class="exchange__purse-visa-mastercard" value="5">Visa/MasterCard</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="exchange__info">
+
+                        <div class="exchange__rate">
+                            <span class="exchange__subtitle exchange__subtitle_rate">Exchange rate</span><br>
+                            <span class="exchange__value exchange__value_rub-btc">3 011 406.09</span>
+                            <p class="exchange__value"><span class="exchange__value exchange__value_dark">RUB</span> = 1
+                                <span class="exchange__value exchange__value_dark">BTC</span></p>
+                        </div>
+
+                        <div class="exchange__reserves">
+                            <span class="exchange__subtitle exchange__subtitle_reserves">Reserves</span><br>
+                            <p class="exchange__value">21.27498619 <span
+                                    class="exchange__value exchange__value_dark">BTH</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Кнопка: -->
+                    <input class="exchange__button" type="submit" value="EXCHANGE">
+
+
+                    <div class="exchange__agreement">
+                        <input class="exchange__checkbox" name="user_checkbox" type="checkbox" checked="checked">
+                        <span class="exchange__subtitle">I agree with</span>
+                        <a class="exchange__subtitle exchange__subtitle_link" href="#">Rules and statements</a>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="exchange__cryptocurrency">
+                    <img class="exchange__cryptocurrency-picture" src="@img/exchange_cryptocurrency.png"
+                        alt="cryptocurrency">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

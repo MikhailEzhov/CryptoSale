@@ -1,0 +1,100 @@
+.transactions {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ceedff;
+        transform: skew(0deg,-2deg);
+    }
+    padding-top: 90px;
+    padding-bottom: 70px;
+    @media (max-width: ($maxWidthContentNumber - 1) + px) {
+        @include adaptivPX($maxWidthContentNumber, 90, padding-top, 50);
+        @include adaptivPX($maxWidthContentNumber, 70, padding-bottom, 30);
+    } // можно менять только:                     это     это     это
+    @media (max-width: $breakpointMY320px) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    } //   это     это
+
+    &__title {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 30px;
+        color: $colorBlack;
+        margin-bottom: 24px;
+        @media (max-width: ($maxWidthContentNumber - 1) + px) {
+            @include adaptivPX($maxWidthContentNumber, 30, font-size, 22);
+        } // можно менять только:                     это     это     это
+        @media (max-width: $breakpointMY320px) {
+            font-size: 22px;
+        } //   это     это
+        @media (max-width: $breakpointSMpx) {
+            text-align: center;
+        }
+    }
+
+    &__description {
+        font-size: 22px;
+        color: $colorBlack;
+        margin-bottom: 60px;
+        @media (max-width: ($maxWidthContentNumber - 1) + px) {
+            @include adaptivPX($maxWidthContentNumber, 22, font-size, 16);
+            @include adaptivPX($maxWidthContentNumber, 60, margin-bottom, 46);
+        } // можно менять только:                     это     это     это
+        @media (max-width: $breakpointMY320px) {
+            font-size: 16px;
+            margin-bottom: 46px;
+        } //   это     это
+        @media (max-width: $breakpointSMpx) {
+            text-align: center;
+        }
+    }
+
+    &__elements {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.transaction {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 36px;
+    width: 25%;
+    @media (max-width: $breakpointXLpx) {
+        width: 33%;
+    }
+    @media (max-width: $breakpointSMpx) {
+        width: 50%;
+    }
+
+
+    &__picture {
+        display: flex;
+        width: 50px;
+        @media (max-width: $breakpointSMpx) {
+            width: 38px;
+        }
+    }
+
+    &__title {
+        margin-left: 8px;
+        font-size: 18px;
+        color: $colorBlack;
+        @media (max-width: $breakpointSMpx) {
+            margin-right: 20px;
+        }
+        @media (max-width: ($maxWidthContentNumber - 1) + px) {
+            @include adaptivPX($maxWidthContentNumber, 18, font-size, 16);
+        } // можно менять только:                     это     это     это
+        @media (max-width: $breakpointMY320px) {
+            font-size: 16px;
+        } //   это     это
+    }
+}

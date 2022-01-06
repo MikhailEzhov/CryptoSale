@@ -1,0 +1,116 @@
+.footer {
+    background: #323232;
+    padding-top: 46px;
+    padding-bottom: 60px;
+
+    &__main {
+        display: flex;
+        @media (max-width: $breakpointSMpx) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__info {
+        margin-right: 30px;
+        @media (max-width: $breakpointSMpx) {
+            margin-right: 0;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 20px;
+        @import "_animation-elements";
+    }
+
+    &__logo-title {
+        margin-left: 16px;
+    }
+
+    &__copyright {
+        width: 170px;
+    }
+
+    &__nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        @media (max-width: $breakpointLGpx) {
+            flex-wrap: wrap-reverse;
+            justify-content: space-evenly;
+        }
+    }
+
+    &__exchange {
+    }
+
+    &__exchange-title {
+        font-size: 18px;
+        font-weight: normal;
+        margin-bottom: 12px;
+    }
+
+    &__exchange-list {
+    }
+
+    &__exchange-link {
+        font-size: 14px;
+        list-style-type: disc;
+        @import "_animation-links";
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        width: 210px;
+        @media (max-width: 1025px) {
+            flex-direction: column;
+            width: auto;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        @media (max-width: $breakpointLGpx) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__links-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        font-size: 16px;
+        white-space: nowrap;
+        @import "_animation-links";
+    }
+
+    &__buttons {
+    }
+
+    &__button {
+        white-space: nowrap;
+        width: max-content;
+        height: max-content;
+        margin-bottom: 60px;
+        @import "_animation-buttons";
+        &_blue {
+            background: $colorLightBlue;
+            border-radius: 18px;
+            color: $colorBlack;
+            padding: 8.5px 40px;
+            margin-right: 24px;
+        }
+
+        &_transparent {
+            border: 2px solid $borderColorMain;
+            border-radius: 20px;
+            padding: 8px 21px;
+            background-color: transparent;
+            color: $fontColorMain;
+        }
+    }
+}
+

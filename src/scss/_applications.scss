@@ -1,0 +1,140 @@
+.applications {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ceedff;
+        transform: skew(0deg, 2deg);
+    }
+    padding-top: 90px;
+    padding-bottom: 70px;
+    @media (max-width: ($maxWidthContentNumber - 1) + px) {
+        @include adaptivPX($maxWidthContentNumber, 90, padding-top, 50);
+        @include adaptivPX($maxWidthContentNumber, 70, padding-bottom, 50);
+    } // можно менять только:                     это     это     это
+    @media (max-width: $breakpointMY320px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    } //   это     это
+
+    &__title {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 30px;
+        color: $colorBlack;
+        margin-bottom: 72px;
+        @media (max-width: ($maxWidthContentNumber - 1) + px) {
+            @include adaptivPX($maxWidthContentNumber, 30, font-size, 22);
+            @include adaptivPX($maxWidthContentNumber, 72, margin-bottom, 48);
+        } // можно менять только:                     это     это     это
+        @media (max-width: $breakpointMY320px) {
+            font-size: 22px;
+            margin-bottom: 48px;
+        } //   это     это
+        @media (max-width: $breakpointLGpx) {
+            text-align: center;
+        }
+    }
+
+    &__glide-slider {
+    }
+}
+
+.glide {
+    &__track {
+    }
+
+    &__slides {
+        padding-left: 0;
+        display: flex;
+
+        flex-wrap: wrap; // ДОБАВИЛ
+    }
+
+    &__slide {
+        // outline: 1px solid red;
+
+        margin-bottom: 48px; // ДОБАВИЛ
+        width: 50%; // ДОБАВИЛ
+    }
+
+    &__slide-date {
+        color: $colorBlack;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__slide-exchange {
+        margin-top: 22px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $breakpointLGpx) {
+            flex-direction: column;
+        }
+    }
+
+    &__slide-give {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__slide-picture {
+        width: 35px;
+    }
+
+    &__slide-numbers {
+        word-wrap: break-word;
+        font-weight: 500;
+        font-size: 22px;
+        color: $colorBlack;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &__slide-currency {
+        color: $colorBlack;
+    }
+
+    &__slide-arrows {
+        align-self: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        @media (max-width: $breakpointLGpx) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__slide-receive {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__bullets {
+        display: none;
+        @media (max-width: $breakpointLGpx) {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+
+    &__bullet {
+        background: #8b8b8b;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        &--active {
+            background-color: $colorLightBlue;
+        }
+    }
+}

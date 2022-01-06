@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>CryptoSale</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+
+                <div class="header__main">
+                    <a class="header__logo" href="#">
+                        <img src="img/site_logo.svg" alt="CryptoSale">
+                        <span class="header__logo-title">CryptoSale</span>
+                    </a>
+
+                    <nav class="header__nav">
+                        <a class="header__link" href="#">Home</a>
+                        <a class="header__link" href="#">Tariffs</a>
+                        <a class="header__link" href="#">Reviews</a>
+                        <a class="header__link" href="#">Rules</a>
+                        <a class="header__link" href="#">FAQ</a>
+                        <a class="header__link" href="#">For partners</a>
+                        <a class="header__link" href="#">Contacts</a>
+
+                        <div class="header__search">
+                            <form class="header__search-form">
+                                <input class="header__search-input" type="text" placeholder="Поиск">
+                                <button class="header__search-button" type="submit"></button>
+                            </form>
+                        </div>
+                    </nav>
+
+                    <div class="header__block">
+                        <button id="modalWindowRegistrationBtnMain" class="header__button header__button_blue"
+                            type="button">Sign Up</button>
+                        <img class="header__user-avatar" src="img/avatar_log_in.jpg" alt="avatar">
+                        <button id="modalWindowLoginBtnMain" class="header__button header__button_transparent"
+                            type="button">Login in</button>
+
+                        <div class="header__menu-icon">
+                            <div class="header__icon-burger"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+
+        <main>
+            <section class="exchange">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <h1 class="exchange__title">Cryptocurrency exchange fast & safe</h1>
+                            <p class="exchange__description">No extra fee. Account replenishment no longer than 15
+                                minutes</p>
+
+
+                            <form class="exchange__form" action="#" method="post">
+
+                                <div class="exchange__block">
+                                    <div class="exchange__give">
+                                        <span class="exchange__subtitle exchange__subtitle_give">You give</span><br>
+                                        <input id="inputGive" class="exchange__input exchange__input_give" required
+                                            placeholder="Amount" name="user_give" type="text">
+                                        <select id="selectCrypto" class="exchange__input exchange__input_currency"
+                                            required placeholder="Amount" name="user_currency">
+                                            <option class="exchange__currency-default" value="">Choose the currency
+                                            </option>
+                                            <option value="1">BTC</option>
+                                            <option value="2">BCH</option>
+                                            <option value="3">ETH</option>
+                                            <option value="4">LTC</option>
+                                        </select>
+                                    </div>
+
+                                    <span class="exchange__switch"></span>
+
+                                    <div class="exchange__receive">
+                                        <span class="exchange__subtitle exchange__subtitle_receive">You
+                                            receive</span><br>
+                                        <input id="inputReceive" class="exchange__input exchange__input_receive"
+                                            required placeholder="Amount" name="user_receive" type="text">
+                                        <select id="selectBank" class="exchange__input exchange__input_bank" required
+                                            name="user_bank">
+                                            <option class="exchange__currency-default" value="">Choose the currency
+                                            </option>
+                                            <option class="exchange__purse-tinkoff" value="1">Tinkoff bank</option>
+                                            <option class="exchange__purse-sberbank" value="2">Sberbank</option>
+                                            <option class="exchange__purse-youmoney" value="3">YouMoney</option>
+                                            <option class="exchange__purse-qiwi" value="4">QIWI</option>
+                                            <option class="exchange__purse-visa-mastercard" value="5">Visa/MasterCard
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="exchange__info">
+
+                                    <div class="exchange__rate">
+                                        <span class="exchange__subtitle exchange__subtitle_rate">Exchange
+                                            rate</span><br>
+                                        <span class="exchange__value exchange__value_rub-btc">3 011 406.09</span>
+                                        <p class="exchange__value"><span
+                                                class="exchange__value exchange__value_dark">RUB</span> = 1
+                                            <span class="exchange__value exchange__value_dark">BTC</span></p>
+                                    </div>
+
+                                    <div class="exchange__reserves">
+                                        <span class="exchange__subtitle exchange__subtitle_reserves">Reserves</span><br>
+                                        <p class="exchange__value">21.27498619 <span
+                                                class="exchange__value exchange__value_dark">BTH</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Кнопка: -->
+                                <input class="exchange__button" type="submit" value="EXCHANGE">
+
+
+                                <div class="exchange__agreement">
+                                    <input class="exchange__checkbox" name="user_checkbox" type="checkbox"
+                                        checked="checked">
+                                    <span class="exchange__subtitle">I agree with</span>
+                                    <a class="exchange__subtitle exchange__subtitle_link" href="#">Rules and
+                                        statements</a>
+                                </div>
+                            </form>
+
+
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="exchange__cryptocurrency">
+                                <img class="exchange__cryptocurrency-picture" src="img/exchange_cryptocurrency.png"
+                                    alt="cryptocurrency">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="transactions">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="transactions__title">What is good about the CryptoSale </h2>
+                            <p class="transactions__description">With our service, you can buy or sell cryptocurrency
+                                with a 100% guarantee. Transactions take place automatically, we do not store your data
+                                for any exchange.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col transactions__elements">
+                            <div class="transaction">
+                                <img class="transaction__picture" src="img/logo_QIWI.svg" alt="QIWI">
+                                <span class="transaction__title">QIWI RUB</span>
+                            </div>
+                            <div class="transaction">
+                                <img class="transaction__picture" src="img/logo_YouMoney.svg" alt="YouMoney">
+                                <span class="transaction__title">YouMoney RUB</span>
+                            </div>
+                            <div class="transaction">
+                                <img class="transaction__picture" src="img/logo_Sber.svg" alt="Sberbank">
+                                <span class="transaction__title">Sber RUB</span>
+                            </div>
+                            <div class="transaction">
+                                <img class="transaction__picture" src="img/logo_Tinkoff.svg" alt="Tinkoff bank">
+                                <span class="transaction__title">Tinkoff RUB</span>
+                            </div>
+                            <div class="transaction">
+                                <img class="transaction__picture" src="img/logo_Visa_MasterCard.svg"
+                                    alt="Visa_MasterCard">
+                                <span class="transaction__title">Visa/ MasterCard RUB</span>
+                            </div>
+                            <div class="transaction">
+                                <img class="transaction__picture" src="img/logo_Bitcoin.svg" alt="Bitcoin">
+                                <span class="transaction__title">Bitcoin BTC</span>
+                            </div>
+                            <div class="transaction">
+                                <img class="transaction__picture" src="img/logo_Bitcoin_Cash.svg" alt="Bitcoin_Cash">
+                                <span class="transaction__title">Bitcoin Cash BCH</span>
+                            </div>
+                            <div class="transaction">
+                                <img class="transaction__picture" src="img/logo_Litecoin.svg" alt="Litecoin">
+                                <span class="transaction__title">Litecoin LTC</span>
+                            </div>
+                            <div class="transaction">
+                                <img class="transaction__picture" src="img/logo_Ethereum.svg" alt="Ethereum">
+                                <span class="transaction__title">Ethereum ETH</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            <section class="treasury">
+                <div class="container">
+
+                    <h2 class="treasury__title">Treasury</h2>
+
+                    <div class="treasury__block">
+
+                        <div class="treasury__element">
+                            <div class="treasury__label">
+                                <img class="treasury__picture" src="img/logo_QIWI.svg" alt="QIWI">
+                                <span class="treasury__subtitle">QIWI</span>
+                            </div>
+                            <div class="treasury__value">
+                                <span class="treasury__numbers">563 859 038.09</span>
+                                <span class="treasury__currency">RUB</span>
+                            </div>
+                        </div>
+
+                        <div class="treasury__element">
+                            <div class="treasury__label">
+                                <img class="treasury__picture" src="img/logo_YouMoney.svg" alt="YouMoney">
+                                <span class="treasury__subtitle">YouMoney</span>
+                            </div>
+                            <div class="treasury__value">
+                                <span class="treasury__numbers">563 859 038.09</span>
+                                <span class="treasury__currency">RUB</span>
+                            </div>
+                        </div>
+
+                        <div class="treasury__element">
+                            <div class="treasury__label">
+                                <img class="treasury__picture" src="img/logo_Sber.svg" alt="Sberbank">
+                                <span class="treasury__subtitle">Sber</span>
+                            </div>
+                            <div class="treasury__value">
+                                <span class="treasury__numbers">563 859 038.09</span>
+                                <span class="treasury__currency">RUB</span>
+                            </div>
+                        </div>
+
+                        <div class="treasury__element">
+                            <div class="treasury__label">
+                                <img class="treasury__picture" src="img/logo_Tinkoff.svg" alt="Tinkoff">
+                                <span class="treasury__subtitle">Tinkoff</span>
+                            </div>
+                            <div class="treasury__value">
+                                <span class="treasury__numbers">563 859 038.09</span>
+                                <span class="treasury__currency">RUB</span>
+                            </div>
+                        </div>
+
+                        <div class="treasury__element">
+                            <div class="treasury__label">
+                                <img class="treasury__picture" src="img/logo_Visa_MasterCard.svg" alt="Visa_MasterCard">
+                                <span class="treasury__subtitle">Visa/ MasterCard</span>
+                            </div>
+                            <div class="treasury__value">
+                                <span class="treasury__numbers">563 859 038.09</span>
+                                <span class="treasury__currency">RUB</span>
+                            </div>
+                        </div>
+
+                        <div class="treasury__element">
+                            <div class="treasury__label">
+                                <img class="treasury__picture" src="img/logo_Bitcoin.svg" alt="Bitcoin">
+                                <span class="treasury__subtitle">Bitcoin</span>
+                            </div>
+                            <div class="treasury__value">
+                                <span class="treasury__numbers">2.456 800 450</span>
+                                <span class="treasury__currency">BTC</span>
+                            </div>
+                        </div>
+
+                        <div class="treasury__element">
+                            <div class="treasury__label">
+                                <img class="treasury__picture" src="img/logo_Bitcoin_Cash.svg" alt="Bitcoin_Cash">
+                                <span class="treasury__subtitle">Bitcoin Cash</span>
+                            </div>
+                            <div class="treasury__value">
+                                <span class="treasury__numbers">36.000 506 890</span>
+                                <span class="treasury__currency">BCH</span>
+                            </div>
+                        </div>
+
+                        <div class="treasury__element">
+                            <div class="treasury__label">
+                                <img class="treasury__picture" src="img/logo_Ethereum.svg" alt="Ethereum">
+                                <span class="treasury__subtitle">Ethereum</span>
+                            </div>
+                            <div class="treasury__value">
+                                <span class="treasury__numbers">14.989 256 456</span>
+                                <span class="treasury__currency">ETH</span>
+                            </div>
+                        </div>
+
+                        <div class="treasury__element">
+                            <div class="treasury__label">
+                                <img class="treasury__picture" src="img/logo_Litecoin.svg" alt="Litecoin">
+                                <span class="treasury__subtitle">Litecoin</span>
+                            </div>
+                            <div class="treasury__value">
+                                <span class="treasury__numbers">21.274 86099</span>
+                                <span class="treasury__currency">LTC</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            <section class="advantage">
+                <div class="container">
+
+                    <h2 class="advantage__title">Why users choose our service</h2>
+
+                    <div class="row">
+
+                        <div class="col-md-4 col-12">
+                            <div class="advantage__element">
+                                <img class="advantage__picture" src="img/advantage_everything.svg" alt="fair">
+                                <h3 class="advantage__subtitle">Everything is fair</h3>
+                                <p class="advantage__description">Fixed currency exchange. No hidden fees</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-12">
+                            <div class="advantage__element">
+                                <img class="advantage__picture" src="img/advantage_support.svg" alt="support">
+                                <h3 class="advantage__subtitle">Around the clock client support</h3>
+                                <p class="advantage__description">our support specialists are always available and
+                                    manage requests 24/7</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-12">
+                            <div class="advantage__element">
+                                <img class="advantage__picture" src="img/advantage_exchange.svg" alt="exchange">
+                                <h3 class="advantage__subtitle">A lot of types of exchange</h3>
+                                <p class="advantage__description">we offer our users 8 types of exchange and 2000
+                                    directions</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-4 col-12">
+                            <div class="advantage__element">
+                                <img class="advantage__picture" src="img/advantage_fast.svg" alt="fast">
+                                <h3 class="advantage__subtitle">Fast</h3>
+                                <p class="advantage__description">simple and straightforward functionality, and we
+                                    process applications within 15 minutes</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-12">
+                            <div class="advantage__element">
+                                <img class="advantage__picture" src="img/advantage_safe.svg" alt="safe">
+                                <h3 class="advantage__subtitle">Safe</h3>
+                                <p class="advantage__description">our servers have a multi-level security system, and we
+                                    are constantly workingto improve and update it</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-12">
+                            <div class="advantage__element">
+                                <img class="advantage__picture" src="img/advantage_confidentially.svg"
+                                    alt="confidentially">
+                                <h3 class="advantage__subtitle">Confidentially</h3>
+                                <p class="advantage__description">we never share user data with third parties</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            <section class="applications">
+                <div class="container">
+
+                    <h2 class="applications__title">Latest applications</h2>
+
+                    <div class="applications__glide-slider">
+                        <div id="applicationsGlideSliderTrack" class="glide__track" data-glide-el="track">
+                            <div class="glide__slides">
+
+                                <div class="glide__slide">
+                                    <span class="glide__slide-date">28.07.2020, 12:36</span>
+                                    <div class="glide__slide-exchange">
+                                        <div class="glide__slide-give">
+                                            <img class="glide__slide-picture" src="img/logo_Bitcoin.svg" alt="Bitcoin">
+                                            <span class="glide__slide-numbers">0.056600935</span>
+                                            <span class="glide__slide-currency">BTC</span>
+                                        </div>
+                                        <img class="glide__slide-arrows" src="img/arrows_black.svg" alt="arrows">
+                                        <div class="glide__slide-receive">
+                                            <img class="glide__slide-picture" src="img/logo_Visa_MasterCard.svg"
+                                                alt="Visa_MasterCard">
+                                            <span class="glide__slide-numbers">102 509.36</span>
+                                            <span class="glide__slide-currency">RUB</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="glide__slide">
+                                    <span class="glide__slide-date">12.07.2020, 10:48</span>
+                                    <div class="glide__slide-exchange">
+                                        <div class="glide__slide-give">
+                                            <img class="glide__slide-picture" src="img/logo_Ethereum.svg"
+                                                alt="Ethereum">
+                                            <span class="glide__slide-numbers">0.056600935</span>
+                                            <span class="glide__slide-currency">ETH</span>
+                                        </div>
+                                        <img class="glide__slide-arrows" src="img/arrows_black.svg" alt="arrows">
+                                        <div class="glide__slide-receive">
+                                            <img class="glide__slide-picture" src="img/logo_Sber.svg" alt="Sberbank">
+                                            <span class="glide__slide-numbers">756 600 935</span>
+                                            <span class="glide__slide-currency">RUB</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="glide__slide">
+                                    <span class="glide__slide-date">26.07.2020, 20:36</span>
+                                    <div class="glide__slide-exchange">
+                                        <div class="glide__slide-give">
+                                            <img class="glide__slide-picture" src="img/logo_Bitcoin.svg" alt="Bitcoin">
+                                            <span class="glide__slide-numbers">54 000</span>
+                                            <span class="glide__slide-currency">BTC</span>
+                                        </div>
+                                        <img class="glide__slide-arrows" src="img/arrows_black.svg" alt="arrows">
+                                        <div class="glide__slide-receive">
+                                            <img class="glide__slide-picture" src="img/logo_Litecoin.svg"
+                                                alt="Litecoin">
+                                            <span class="glide__slide-numbers">0.56600935</span>
+                                            <span class="glide__slide-currency">LTC</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="glide__slide">
+                                    <span class="glide__slide-date">10.07.2020, 15:08</span>
+                                    <div class="glide__slide-exchange">
+                                        <div class="glide__slide-give">
+                                            <img class="glide__slide-picture" src="img/logo_Bitcoin.svg" alt="Bitcoin">
+                                            <span class="glide__slide-numbers">105 660.09</span>
+                                            <span class="glide__slide-currency">BTC</span>
+                                        </div>
+                                        <img class="glide__slide-arrows" src="img/arrows_black.svg" alt="arrows">
+                                        <div class="glide__slide-receive">
+                                            <img class="glide__slide-picture" src="img/logo_Ethereum.svg"
+                                                alt="Ethereum">
+                                            <span class="glide__slide-numbers">1.50936</span>
+                                            <span class="glide__slide-currency">ETH</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="applicationsGlideSliderBullets" class="glide__bullets" data-glide-el="controls[nav]">
+                            <button class="glide__bullet" data-glide-dir="=0"></button>
+                            <button class="glide__bullet" data-glide-dir="=1"></button>
+                            <button class="glide__bullet" data-glide-dir="=2"></button>
+                            <button class="glide__bullet" data-glide-dir="=3"></button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            <article class="comments">
+                <div class="container">
+
+                    <h2 class="comments__title">User experience</h2>
+
+                    <div class="comments__slider-glide">
+                        <div class="comments-glide__track" data-glide-el="track">
+                            <div class="comments-glide__slides">
+
+                                <div class="comments-glide__slide">
+                                    <div class="comments-glide__slide-comment">
+                                        <span class="comments-glide__slide-nickname">@NickName77</span>
+                                        <p class="comments-glide__slide-description">Excellent service, everything is
+                                            translated quickly, well done. Never cheated with commissions</p>
+                                        <div class="comments-glide__slide-date">21.09.2021,<span
+                                                class="comments-glide__slide-time">12:31</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="comments-glide__slide">
+                                    <div class="comments-glide__slide-comment">
+                                        <span class="comments-glide__slide-nickname">_crypto_ghost_</span>
+                                        <p class="comments-glide__slide-description">I am very grateful to this exchange
+                                            for help and support! We decided everything in the best way) I am new to the
+                                            market for crepes. Yesterday, from one platform, I tried to make a
+                                            withdrawal to the map, and as it turned out, that platform</p>
+                                        <div class="comments-glide__slide-date">21.09.2021,<span
+                                                class="comments-glide__slide-time">18:55</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="comments-glide__slide">
+                                    <div class="comments-glide__slide-comment">
+                                        <span class="comments-glide__slide-nickname">Satrak</span>
+                                        <p class="comments-glide__slide-description">A cool exchanger, even with the
+                                            first time antentification, everything is simple, understandable and, most
+                                            importantly, quickly, money is credited almost instantly, I advise it to
+                                            everyone.</p>
+                                        <div class="comments-glide__slide-date">15.08.2021,<span
+                                                class="comments-glide__slide-time">08:42</span></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="comments-glide__bullets" data-glide-el="controls[nav]">
+                            <button class="comments-glide__bullet" data-glide-dir="=0"></button>
+                            <button class="comments-glide__bullet" data-glide-dir="=1"></button>
+                            <button class="comments-glide__bullet" data-glide-dir="=2"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+            <section class="confidentiality">
+                <div class="container">
+
+                    <div class="confidentiality__main">
+
+                        <div class="confidentiality__block">
+                            <img class="confidentiality__picture" src="img/confidentiality.png" alt="confidentiality">
+                        </div>
+
+                        <div class="confidentiality__info">
+                            <h2 class="confidentiality__title">Confidentiality</h2>
+                            <p class="confidentiality__description">We do not store personal data on our servers and
+                                never transfer it to third parties</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+
+                <div class="footer__main">
+
+                    <div class="footer__info">
+                        <a class="footer__logo" href="#">
+                            <img src="img/site_logo.svg" alt="CryptoSale">
+                            <span class="footer__logo-title">CryptoSale</span>
+                        </a>
+                        <p class="footer__copyright">2021, cryptosale.net All rights reserved</p>
+                    </div>
+
+                    <nav class="footer__nav">
+                        <div class="footer__exchange">
+                            <h3 class="footer__exchange-title">Popular directions of exchange</h3>
+                            <ul class="footer__exchange-list">
+                                <li class="footer__exchange-link" href="#">Exchange Bitcoin to Qiwi</li>
+                                <li class="footer__exchange-link" href="#">Exchange Sber to Bitcoin</li>
+                                <li class="footer__exchange-link" href="#">Exchange Ether to Sber</li>
+                                <li class="footer__exchange-link" href="#">Exchange Ether to Tinkoff</li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__links">
+                            <div class="footer__links-block">
+                                <a class="footer__link" href="#">Tariffs</a>
+                                <a class="footer__link" href="#">Reviews</a>
+                                <a class="footer__link" href="#">Rules</a>
+                                <a class="footer__link" href="#">FAQ</a>
+                            </div>
+                            <div class="footer__links-block">
+                                <a class="footer__link" href="#">For partners</a>
+                                <a class="footer__link" href="#">Policy</a>
+                                <a class="footer__link" href="#">Contacts</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__buttons">
+                            <button id="modalWindowRegistrationBtnMain" class="footer__button footer__button_blue"
+                                type="button">Sign Up</button>
+                            <button id="modalWindowLoginBtnMain" class="footer__button footer__button_transparent"
+                                type="button">Log In</button>
+                        </div>
+                    </nav>
+
+                </div>
+
+            </div>
+        </footer>
+        <div id="modalWindowRegistration" class="modal registration">
+            <div class="container">
+
+                <div class="modal__dialog">
+                    <div class="modal__content">
+
+                        <span id="modalWindowRegistrationBtnClose" class="modal__close"></span>
+
+                        <form id="modalWindowRegistrationForm" class="modal__form" action="#" method="post">
+                            <h2 class="modal__title">Sign Up</h2>
+                            <!-- Имя: -->
+                            <input id="modalWindowRegistrationInputName" class="modal__input modal__input_name" required
+                                placeholder="Name" name="user_name" type="text">
+                            <!-- Email: -->
+                            <input id="modalWindowRegistrationInputEmail" class="modal__input modal__input-email"
+                                required placeholder="Email" name="user_email" type="email">
+                            <!-- Пароль: -->
+                            <input id="modalWindowRegistrationInputPassword" class="modal__input modal__input-password"
+                                required placeholder="Password" name="user_password" type="password">
+                            <!-- Телефон: -->
+                            <!-- <input class="modal__input modal__input_phone" required placeholder="Your phone number" name="user_phone" type="phone"> -->
+                            <!-- Кнопка: -->
+                            <input id="modalWindowRegistrationBtnSubmit" class="modal__button" type="submit"
+                                value="Create My Account">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="modalWindowLogin" class="modal login">
+            <div class="container">
+
+                <div class="modal__dialog">
+                    <div class="modal__content">
+
+                        <span id="modalWindowLoginBtnClose" class="modal__close"></span>
+
+                        <form id="modalWindowLoginForm" class="modal__form" action="#" method="post">
+                            <h2 class="modal__title">Welcome</h2>
+                            <!-- Email: -->
+                            <input id="modalWindowLoginInputEmail" class="modal__input modal__input-email" required
+                                placeholder="Email" name="user_email" type="email">
+                            <!-- Пароль: -->
+                            <input id="modalWindowLoginInputPassword" class="modal__input modal__input-password"
+                                required placeholder="Password" name="user_password" type="password">
+                            <!-- Кнопка: -->
+                            <input id="modalWindowLoginBtnSubmit" class="modal__button" type="submit" value="LOGIN">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bundle.js"></script>
+</body>
+
+</html>

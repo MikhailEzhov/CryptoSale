@@ -1,0 +1,25 @@
+// ПЕРЕМЕННЫЕ:
+$fontFamilyMain: "Rubik", Arial, Helvetica, sans-serif; // основное семейство шрифта
+$fontWeightMain: normal; // основная жирность шрифта
+$fontStyleMain: normal; // основной стиль шрифта
+$fontSizeMain: 18px; // основной размер шрифта
+$lineHeightMain: 1.5; // основная высота между текстом
+$fontColorMain:  #FBFBFB; // основной цвет шрифта
+
+$placeholderColorMain: #8B8B8B; // основной цвет подсказки (при наведении или в input)
+
+$borderColorMain: #6DE0F6; // основной цвет бордера
+
+$backgroundColorMain: radial-gradient(86.56% 115.41% at 20.09% 53.71%, #2C35A2 1%, #252C88 16%, #1B2167 40%, #15194F 62%, #101540 83%, #0F133B 100%); // основной цвет фона
+
+$maxWidthContentNumber: 1164; // максимальная ширина только контента (это не ширина макета)
+$maxWidthContentPX: 1164px; // максимальная ширина только контента (это не ширина макета)
+
+$minWidthContentNumber: 320; // минимальная ширина контента
+$minWidthContentPX: 320px; // минимальная ширина контента
+
+// ДОПОЛНИТЕЛЬНАЯ ПЕРЕМЕННАЯ ДЛЯ ЭТОГО ПРОЕКТА:
+$colorLightBlue:  #6DE0F6; // голубой шрифт
+$colorBlack:  #040404; // голубой шрифт
+$breakpointHeaderMenu: 1120px; // скрытие и появление
+
